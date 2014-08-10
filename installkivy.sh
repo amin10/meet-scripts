@@ -8,3 +8,4 @@ sudo apt-get install cython
 sudo apt-get update
 sudo apt-get install python-kivy
 sudo apt-get update
+sudo pip install git+https://github.com/dgrtwo/ParsePy.git
