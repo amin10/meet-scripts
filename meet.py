@@ -18,16 +18,12 @@ turtle.goto(-300,100)
 turtle.goto(-250, 50)
 turtle.goto(-200, 100)
 turtle.goto(-200, 0)
-def go(x,y)
+def go(x,y):
     turtle.up()
     turtle.goto(x, y)
     turtle.down()
 def draw_e(x,y,h=100):
-    #Get to E:
-
-
-    #turtle.color('white')
-    #E
+    go(x,y)
     turtle.goto(x-h/2 ,y)
     turtle.goto(x-h/2,h/2+y)
     turtle.goto(x,h/2+y)
@@ -36,9 +32,18 @@ def draw_e(x,y,h=100):
     turtle.goto(x,y+h)
 
 def draw_l(x,y,h=100):
-    turtle.up()
-    turtle.goto(x, y)
-    turtle.down()
+    go(x,y)
+    turtle.goto(x, y+h)
+    turtle.goto(x,y)
+    turtle.goto(x+h/2, y)
+
+def draw_h(x,y,h=100):
+    go(x,y)
+    turtle.goto(x,y+h)
+    turtle.goto(x,y+h/2)
+    turtle.goto(x+h/2, y+h/2)
+    turtle.goto(x+h/2, y+h)
+    turtle.goto(x+h/2, y)
 
 draw_e(-100,0)
 draw_e(0,0)
