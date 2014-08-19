@@ -22,20 +22,24 @@ def go(x,y):
     turtle.up()
     turtle.goto(x, y)
     turtle.down()
+
 def draw_e(x,y,h=100):
     go(x,y)
-    turtle.goto(x-h/2 ,y)
-    turtle.goto(x-h/2,h/2+y)
+    turtle.goto(x+h/2 ,y)
+    turtle.goto(x,y)
     turtle.goto(x,h/2+y)
-    turtle.goto(x-h/2,y+h/2)
-    turtle.goto(x-h/2,y+h)
+    turtle.goto(x+h/2,h/2+y)
+    turtle.goto(x,y+h/2)
     turtle.goto(x,y+h)
+    turtle.goto(x+h/2,y+h)
+    go(x+h,y)
 
 def draw_l(x,y,h=100):
     go(x,y)
     turtle.goto(x, y+h)
     turtle.goto(x,y)
     turtle.goto(x+h/2, y)
+    go(x+h,y)
 
 def draw_h(x,y,h=100):
     go(x,y)
@@ -44,9 +48,19 @@ def draw_h(x,y,h=100):
     turtle.goto(x+h/2, y+h/2)
     turtle.goto(x+h/2, y+h)
     turtle.goto(x+h/2, y)
+    go(x+h,y)
 
-draw_e(-100,0)
-draw_e(0,0)
+def draw_c(x,y,h=100):
+    go(x+h/2,y)
+    for i in range(30):
+        turtle.forward(1)
+        turtle.left(1)
+    turtle.left(180)
+    for i in range(240):
+        turtle.forward(1)
+        turtle.right(1)
+
+draw_c(0,0)
 
 #Get to T:
 turtle.up()
