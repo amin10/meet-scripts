@@ -57,3 +57,5 @@ turtle.goto(150,100)
 turtle.ht() #Hide the Turtle!
 
 turtle.mainloop()
+
+#This is a test - Ted
