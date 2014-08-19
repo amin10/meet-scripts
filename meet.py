@@ -18,12 +18,16 @@ turtle.goto(-300,100)
 turtle.goto(-250, 50)
 turtle.goto(-200, 100)
 turtle.goto(-200, 0)
-def go(x,y):
+def go(x,y)
     turtle.up()
     turtle.goto(x, y)
     turtle.down()
 def draw_e(x,y,h=100):
-    go(x,y)
+    #Get to E:
+
+
+    #turtle.color('white')
+    #E
     turtle.goto(x-h/2 ,y)
     turtle.goto(x-h/2,h/2+y)
     turtle.goto(x,h/2+y)
@@ -32,18 +36,26 @@ def draw_e(x,y,h=100):
     turtle.goto(x,y+h)
 
 def draw_l(x,y,h=100):
-    go(x,y)
-    turtle.goto(x, y+h)
-    turtle.goto(x,y)
-    turtle.goto(x+h/2, y)
+    turtle.up()
+    turtle.goto(x, y)
+    turtle.down()
 
-def draw_h(x,y,h=100):
-    go(x,y)
-    turtle.goto(x,y+h)
-    turtle.goto(x,y+h/2)
-    turtle.goto(x+h/2, y+h/2)
-    turtle.goto(x+h/2, y+h)
-    turtle.goto(x+h/2, y)
+
+
+
+
+
+
+# #### Ted's stuff
+def draw_z(x,y,h=100):
+    #x,y is the point at the bottom left of the box which contains the letter
+    width=int(2*h/3)
+    turtle.go(x,y+h)
+    turtle.pendown()
+    turtle.goto(x+width,y+h) #Draw top line of Z
+    turtle.goto(x,y) #Draw diagonal line of Z
+    turtle.goto(x+width,y) #Draw bottom horizontal line of Z
+    go(x+width+int(h/6),y) #Go to right side of box containing letter and add space
 
 draw_e(-100,0)
 draw_e(0,0)
